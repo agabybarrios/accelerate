@@ -26,6 +26,9 @@
  */
 
  function create_custom_post_types() {
+
+/* Case Studies Custom Post Type */
+
     register_post_type( 'case_studies',
         array(
             'labels' => array(
@@ -38,5 +41,39 @@
         )
     );
 }
+/* END Case Studies Custom Post Type */
+
+/* About Services Custom Post Type */
+   register_post_type( 'about_services',
+       array(
+           'labels' => array(
+               'name' => __( 'About Services' ),
+               'singular_name' => __( 'About Service' )
+           ),
+           'public' => true,
+           'has_archive' => true,
+           'rewrite' => array( 'slug' => 'about-services' ),
+       )
+   );
+/* END About Services Custom Post Type */
+
 
 add_action( 'init', 'create_custom_post_types' );
+
+
+/* Dynamic Sidebar */
+function accelerate_theme_child_widget_init() {
+
+	register_sidebar( array(
+	    'name' =>__( 'Homepage sidebar', 'accelerate-theme-child'),
+	    'id' => 'sidebar-2',
+	    'description' => __( 'Appears on the static front page template', 'accelerate-theme-child' ),
+	    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	    'after_widget' => '</aside>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'accelerate_theme_child_widget_init' );
+/* END Dynamic Sidebar */

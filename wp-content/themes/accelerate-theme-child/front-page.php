@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class='homepage-hero'>
 				<?php the_content(); ?>
-				<a class="button" href="<?php echo home_url(); ?>/blog">View Our Work</a>
+				<a class="button" href="<?php echo home_url(); ?>/case-studies">View Our Work</a>
 			</div>
 		<?php endwhile; // end of the loop. ?>
 	</div><!-- .container -->
@@ -45,11 +45,9 @@ get_header(); ?>
 			<?php wp_reset_query(); ?>
 		</ul>
 
-
 	</div>
 
-
-</section>
+</section><!-- .featured-work -->
 
 
 <section class="recent-posts">
@@ -65,8 +63,25 @@ get_header(); ?>
 			<?php wp_reset_query(); ?>
 		</div>
 
-	</div>
+		<div class="twitter-feed">
+			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div id="secondary" class="widget-area" role="complementary">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
+			<?php endif; ?>
 
-</section>
+			<?php while (have_posts()) : the_post();
+				$link = get_field("link");
+				$text_link = get_field("text_link");?>
+
+				<p><a class="follow-us" target="_blank" href="<?php echo $link; ?>"><?php echo $text_link; ?> <span>&rsaquo;</span></a></p>
+
+			<?php endwhile; ?>
+		</div>
+
+	</div>
+</section><!-- .recent-posts -->
+
+
 
 <?php get_footer(); ?>

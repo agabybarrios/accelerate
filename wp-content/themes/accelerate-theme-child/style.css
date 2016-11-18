@@ -24,6 +24,19 @@
     background: none repeat scroll 0 0 #45ac9d;
 }
 
+#menu-top-nav li {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 40px;
+}
+
+#menu-top-nav li:last-child {
+  margin-right: 0;
+}
+
+
+
 /*Home Page Featured Work */
 
 .featured-work h4 {
@@ -48,15 +61,13 @@ li.individual-featured-work {
   font-weight: normal;
   margin: 20px 0; 12px;
 }
-
-
-
 /* END Home Page Featured Work */
 
 
 
 /*Home Page Blog Post*/
 .blog-post {
+  float: left;
   width: 50%;
 }
 
@@ -83,6 +94,69 @@ li.individual-featured-work {
 }
 /*END Home Page Blog Post*/
 
+/*Home Page Tweeter Feed*/
+.twitter-feed {
+  float: left;
+  width: 50%;
+}
+
+.twitter-feed .widget-title {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  color: #a6a6a6;
+  text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.twitter-feed ul {
+  margin-top: 36px;
+  margin-left: 0;
+}
+
+.twitter-feed ul li{
+  color: #2b2b2b;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 0;
+}
+
+.twitter-feed ul li img{
+  margin-right: 10px;
+}
+
+.twitter-feed a.follow-us {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  color: #45ac9d;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.twitter-feed a.follow-us:focus {
+  outline: 0;
+}
+/*END Home Page Tweeter Feed*/
+
+/*Sidebar*/
+.mc4wp-form-fields {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a6a6a6;
+  margin-bottom: 30px;
+}
+
+input[type="submit"] {
+  background-color: #45ac9d;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.searchform input[type="submit"] {
+  margin-top: 25px;
+}
+/*END Sidebar*/
 
 /* Case Study Page */
 article.case-study {
@@ -107,7 +181,7 @@ div.case-study-images img {
 
 aside a {
   font-weight: bold;
-  
+
 }
 
 /* Archive Case Studies*/
@@ -121,3 +195,175 @@ aside h5 {
 }
 
 /* END Archive Case Studies*/
+
+/* Contact Form */
+.contact-form {
+  margin: 80px 150px;
+}
+
+.nf-field-label {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.nf-field-container.textbox-container {
+  display: inline-block;
+
+}
+.nf-field-container.email-container {
+  display: inline-block;
+  float: right;
+}
+
+#nf-field-1 {
+  width: 300px;
+}
+
+#nf-field-2 {
+  width: 300px;
+}
+
+#nf-field-2-wrap.field-wrap {
+  display: block;
+}
+
+#nf-field-4 {
+  float: right;
+  width: 206px;
+  height: 55px;
+  background-color: #45ac9d;
+  color: #ffffff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Form submited message*/
+.nf-response-msg {
+  color: #45ac9d;
+  font-style: italic;
+}
+/* END Form submited message*/
+/* END Contact Form */
+
+/* About Page*/
+.about-page {
+  background: url("img/taxi-photo.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+  height: 100px;
+  margin: 0 0 80px;
+  padding: 100px 0;
+  background-position: 30% 100%;
+}
+
+.aboutpage-banner {
+  margin: 0 25%;
+	text-align:center;
+}
+
+.aboutpage-banner p {
+  color: #ffffff;
+}
+
+.aboutpage-banner p span {
+    color: #45ac9d;
+    font-weight: bold;
+}
+
+.about-services h4 {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+}
+
+.about-services p {
+  text-align: center;
+}
+
+.about-services-list {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.individual-service {
+  margin: 50px 0;
+}
+
+.individual-service p {
+  text-align: left;
+}
+
+figure {
+  width: 20%;
+  float: left;
+}
+
+.service-text {
+  width: 65%;
+  float: left
+}
+
+.service-text h5 {
+  margin-top: 0;
+}
+
+.individual-service:nth-child(odd) figure {
+  float: left;
+  margin-left: 7%;
+}
+
+.individual-service:nth-child(even) figure {
+  float: right;
+  margin-right: 6%;
+  margin-left: 1%;
+}
+
+.individual-service:nth-child(even) .service-text {
+  float: right;
+}
+
+.contact-us {
+  border-top: 1px dotted #e3e1e1;
+}
+
+.contact-us h2 {
+  margin-left: 150px;
+}
+
+.contact-us a {
+  float: right;
+  margin-right: 160px;
+  margin-top: -50px;
+  padding: 10px 50px;
+}
+/* END About Page*/
+
+
+/* 404 Page */
+.error404 .page404 {
+  margin-top: 100px;
+}
+
+.error404 .image404 {
+  float: left;
+  width: auto;
+  margin-left: 8%;
+  margin-right: 5%;
+}
+
+.error404 .text404 {
+  float: left;
+  width: 55%;
+  margin-right: 8%;
+  margin-bottom: 200px;
+}
+
+.error404 .text404 h2 {
+  color: #45ac9d;
+}
+
+.error404 .text404 a {
+  color: #45ac9d;
+  font-weight: bold;
+}
+/* END 404 Page */
